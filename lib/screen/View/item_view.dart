@@ -64,20 +64,22 @@ class _Item_ScreenState extends State<Item_Screen> {
         //     itemBuilder: (context, index) {
         //       return watchpair();
         //     },itemCount: providerF!.itemList.length,),
+        // body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index) {
+        //   return Container(
+        //     height: 50,
+        //     color: Colors.grey,
+        //     child: Column(
+        //       children: [
+        //         Image.asset("${providerF!.itemList[index].image}",height: 80,width: 50,),
+        //         Text("${providerF!.itemList[index].name}",style: TextStyle(fontSize: 10),),
+        //         Text("${providerF!.itemList[index].price}",style: TextStyle(fontSize: 10),),
+        //       ],
+        //     ),
+        //   );
+        // },itemCount: providerF!.itemList.length,)
         body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2), itemBuilder: (context, index) {
-          return Container(
-            height: 50,
-            color: Colors.grey,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Image.asset("${providerF!.itemList[index].image}",height: 80,width: 50,),
-                Text("${providerF!.itemList[index].name}",style: TextStyle(fontSize: 10),),
-                Text("${providerF!.itemList[index].name}",style: TextStyle(fontSize: 10),),
-              ],
-            ),
-          );
-        },itemCount: providerF!.itemList.length,)
+          return watchoo(index);
+        },itemCount: providerF!.itemList.length,),
       ),
     );
   }
@@ -127,6 +129,20 @@ class _Item_ScreenState extends State<Item_Screen> {
           ),
         );
       }, itemCount: providerF!.itemList.length,),
+    );
+  }
+  Widget watchoo(int index)
+  {
+    return Container(
+      height: 50,
+      width: 100,
+      child: Column(
+        children: [
+          Image.asset("${providerF!.itemList[index].image}",),
+          Text("${providerF!.itemList[index].name}"),
+
+        ],
+      ),
     );
   }
 }
