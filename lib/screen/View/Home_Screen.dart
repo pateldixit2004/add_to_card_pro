@@ -40,6 +40,8 @@ class _Home_ScrrenState extends State<Home_Scrren> {
                 SizedBox(width: 15),
                 IconButton(onPressed: () {
 
+                  Navigator.pushNamed(context, 'add card',);
+
                 }, icon: Icon(Icons.shopping_cart, color: Colors.black,)),
                 SizedBox(width: 15),
                 Icon(Icons.notifications, color: Colors.black,),
